@@ -1,3 +1,7 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
 class Solution {
     public:
         int searchInsert(vector<int>& nums, int target) {
@@ -13,3 +17,10 @@ class Solution {
             return L;
         }
     };
+
+int main(){
+    vector<int> nums = (1, 3, 5, 7);
+    Solution answer;
+    cout << answer.searchInsert(nums, 2);
+    return 0;
+}

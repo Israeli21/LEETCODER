@@ -1,0 +1,12 @@
+func merge(arr, target)
+    if(arr.size() == 1)
+        return target;
+    return minimum(0, arr.size() - 1, target)
+    
+func minimum(i, j, target)
+    if(arr.size() == 1)
+        return;
+    third = arr.size()/3
+    minimum(i, third, target)
+    minimum(third - 1, thrid * 2, target)
+    minimum((target * 2) + 1, target)
