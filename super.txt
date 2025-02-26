@@ -1,0 +1,20 @@
+func kClosest(vector<vector<int>>& points, int k)
+    vector<int> length;
+    for i = 0 to less than size of the vector points:
+        x = x-axis point
+        y = y-axis point
+        int distance = sqrt(x^2 + y^2)
+        length.push_back(distance)
+    
+    closest(length, 0, length.size())
+
+func closest(length, n)
+    if(n == 1)
+        return length
+    i = closest(length, 0, n/2)
+    j = closest(length, n/2 + 1, n)
+    
+    if(i < j)
+        return i
+    else
+        return j
