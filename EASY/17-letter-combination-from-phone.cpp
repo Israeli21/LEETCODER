@@ -55,53 +55,53 @@ int main(){
 // letterCombinations(a, mp, 2, "bd", res), c = NULL; UP STACK
 
 
-// Efficient Solution: Queues
-#include <bits/stdc++.h>
-using namespace std;
+// // Efficient Solution: Queues
+// #include <bits/stdc++.h>
+// using namespace std;
 
-// Function to return a vector that contains all the 
-// generated letter combinations
-vector<string> letterCombinations(vector<int> &a)
-{
-    // mp[i] stores all characters that correspond to ith digit in phone
-    string mp[10] = { "0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
+// // Function to return a vector that contains all the 
+// // generated letter combinations
+// vector<string> letterCombinations(vector<int> &a)
+// {
+//     // mp[i] stores all characters that correspond to ith digit in phone
+//     string mp[10] = { "0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
 
-    // To store the generated letter combinations
-    vector<string> res;
+//     // To store the generated letter combinations
+//     vector<string> res;
 
-    // Queue to store intermediate combinations
-    queue<string> q;
-    q.push("");
+//     // Queue to store intermediate combinations
+//     queue<string> q;
+//     q.push("");
 
-    // Process combinations using BFS-like approach
-    while (!q.empty()) {
-        string s = q.front();
-        q.pop();
+//     // Process combinations using BFS-like approach
+//     while (!q.empty()) {
+//         string s = q.front();
+//         q.pop();
 
-        // If complete word is generated, 
-        // add to the result list
-        if (s.length() == a.size()) {
-            res.push_back(s);
-        } else {
-            // Try all possible letters for the
-            // current digit in the vector a
-            for (char c : mp[a[s.length()]]) {
-                q.push(s + c);
-            }
-        }
-    }
-    // Return the generated combinations
-    return res;
-}
+//         // If complete word is generated, 
+//         // add to the result list
+//         if (s.length() == a.size()) {
+//             res.push_back(s);
+//         } else {
+//             // Try all possible letters for the
+//             // current digit in the vector a
+//             for (char c : mp[a[s.length()]]) {
+//                 q.push(s + c);
+//             }
+//         }
+//     }
+//     // Return the generated combinations
+//     return res;
+// }
 
-// Driver code
-int main(){
-    vector<int> a = {2, 3}; 
-    vector<string> res = letterCombinations(a);
-    for (const string &word : res) 
-        cout << word << " ";
-    return 0;
-}
+// // Driver code
+// int main(){
+//     vector<int> a = {2, 3}; 
+//     vector<string> res = letterCombinations(a);
+//     for (const string &word : res) 
+//         cout << word << " ";
+//     return 0;
+// }
 
-// Time Complexity: O(4^n)
-// Space Complexity: O(4^n)
+// // Time Complexity: O(4^n)
+// // Space Complexity: O(4^n)
